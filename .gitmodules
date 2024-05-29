@@ -1,0 +1,16 @@
+[submodule "WuWaTools"]
+	path = WuWaTools
+	url = https://github.com/WuWa-Stuff/WuWaTools.git
+	branch = master
+[submodule "UnrealPak"]
+	path = UnrealPak
+	url = https://github.com/WuWa-Stuff/UnrealPak.git
+	branch = 4.26.2
+[submodule "WuWaTransHelper"]
+	path = WuWaTransHelper
+	url = https://github.com/WuWa-Stuff/WuWaTransHelper.git
+	branch = master
+[submodule "WuWaGameFiles"]
+	path = WuWaGameFiles
+	url = https://github.com/WuWa-Stuff/WuWaGameFiles.git
+	branch = 1.0.x
