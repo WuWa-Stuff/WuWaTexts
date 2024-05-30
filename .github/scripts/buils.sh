@@ -17,7 +17,7 @@ export DIR_TRANSLATED="$make_pak_from_dir/Client/Content/Aki/ConfigDB/en"
 export FILE_CSV="$w_dir/Translations.csv"
 
 echo "Importing CSV to game files..."
-python "$py_csv_import"
+python3 "$py_csv_import"
 
 echo "Generating files map..."
 dotnet run "$makePakFromDir" -c Release --project "$csFilesMapGen"
