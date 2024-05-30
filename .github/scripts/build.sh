@@ -20,7 +20,7 @@ echo "Importing CSV to game files..."
 python3 "$py_csv_import"
 
 echo "Generating files map..."
-dotnet run "$makePakFromDir" -c Release --project "$csFilesMapGen"
+dotnet run "$make_pak_from_dir" -c Release --project "$cs_files_map_gen"
 
 echo "Building .pak file..."
 
