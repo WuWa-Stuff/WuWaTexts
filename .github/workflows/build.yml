@@ -28,7 +28,5 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 8.x.x
-    - name: Pre-run build script
-      run: chmod +x "${{ github.workspace }}/.github/scripts/build.sh"
     - name: Build
       run: "${{ github.workspace }}/.github/scripts/build.sh" "${{ github.workspace }}"
