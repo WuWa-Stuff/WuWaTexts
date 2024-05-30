@@ -47,4 +47,4 @@ echo "{" \
      "}" > "$w_dir/crypto.json"
 
 chmod +x "$unreal_pak"
-"$unreal_pak" "$pakFile" "-Create=$pak_file" -compress "-cryptokeys=$w_dir/crypto.json" -encrypt -encryptindex
+"$unreal_pak" "$pak_file" "-Create=$pak_map_file" -compress "-cryptokeys=$w_dir/crypto.json" -encrypt -encryptindex
