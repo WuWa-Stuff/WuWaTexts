@@ -30,7 +30,7 @@ jobs:
         dotnet-version: 8.x.x
     - uses: actions/setup-python@v5
       with:
-        python-version: '3.10'
+        python-version: 3.10.x
     - name: Pre-run build script
       run: chmod +x "${{ github.workspace }}/.github/scripts/build.sh"
     - name: Build
