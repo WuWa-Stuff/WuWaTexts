@@ -30,3 +30,9 @@ jobs:
         dotnet-version: 8.x.x
     - name: Build
       run: bash -c "${{ github.workspace }}/.github/scripts/build.sh \"${{ github.workspace }}\""
+    - name: Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: |
+          pakchunk0-1.0.0-1.1.0-WindowsNoEditor_10000_P.pak
+          pakchunk0-1.0.0-1.1.0-WindowsNoEditor_10000_P.pak.sha256

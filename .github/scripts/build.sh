@@ -48,3 +48,5 @@ echo "{" \
 
 chmod +x "$unreal_pak"
 "$unreal_pak" "$pak_file" "-Create=$pak_map_file" -compress "-cryptokeys=$w_dir/crypto.json" -encrypt -encryptindex
+
+sha256sum "$pak_file" | awk '{ print $1 }' > "$pak_file.sha256"
