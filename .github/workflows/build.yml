@@ -12,10 +12,19 @@ jobs:
       PAK_KEY: ${{ secrets.PAK_KEY }}
 
     steps:
-    - name: Fetch sources with submodules
-      uses: actions/checkout@v3
+    - name: Pre-fetch sources
+      uses: actions/create-github-app-token@v1
+      id: app_token
       with:
+        app-id: ${{ secrets.REPO_READONLY_GITHUB_APP_ID }}
+        private-key: ${{ secrets.REPO_READONLY_GITHUB_APP_KEY }}
+        owner: ${{ github.repository_owner }}
+    - name: Fetch sources with submodules
+      uses: actions/checkout@v4
+      with:
+        submodules: true
         submodules: recursive
+        token: ${{ steps.app_token.outputs.token }}
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
