@@ -12,6 +12,9 @@ jobs:
       PAK_KEY: ${{ secrets.PAK_KEY }}
 
     steps:
+    - name: Set vars
+      id: vars
+      run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
     - name: Pre-fetch sources
       uses: actions/create-github-app-token@v1
       id: app_token
@@ -33,6 +36,8 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
+        name: v${{ steps.vars.outputs.sha_short }}
+        tag_name: v${{ steps.vars.outputs.sha_short }}
         files: |
           pakchunk0-1.0.0-1.1.0-WindowsNoEditor_10000_P.pak
           pakchunk0-1.0.0-1.1.0-WindowsNoEditor_10000_P.pak.sha256
