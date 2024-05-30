@@ -29,4 +29,4 @@ jobs:
       with:
         dotnet-version: 8.x.x
     - name: Build
-      run: "${{ github.workspace }}/.github/scripts/build.sh" "${{ github.workspace }}"
+      run: bash -c "${{ github.workspace }}/.github/scripts/build.sh" "${{ github.workspace }}"
