@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: srv
+    runs-on: "linux-64-runner"
 
     env:
       PAK_KEY: ${{ secrets.PAK_KEY }}
