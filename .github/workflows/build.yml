@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: "linux-64-runner"
+    runs-on: self-hosted
 
     env:
       PAK_KEY: ${{ secrets.PAK_KEY }}
