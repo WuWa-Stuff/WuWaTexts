@@ -12,9 +12,6 @@ jobs:
       PAK_KEY: ${{ secrets.PAK_KEY }}
 
     steps:
-    - name: Set vars
-      id: vars
-      run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
     - name: Pre-fetch sources
       uses: actions/create-github-app-token@v1
       id: app_token
@@ -27,6 +24,9 @@ jobs:
       with:
         submodules: recursive
         token: ${{ steps.app_token.outputs.token }}
+    - name: Set vars
+      id: vars
+      run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
