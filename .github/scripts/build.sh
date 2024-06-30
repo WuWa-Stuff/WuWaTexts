@@ -13,6 +13,7 @@ py_csv_import="$w_dir/WuWaTransHelper/import.py"
 pak_map_file="$w_dir/files.txt"
 pak_file="$w_dir/pakchunk0-1.0.0-1.1.0-WindowsNoEditor_10000_P.pak"
 
+export DIR_ORIGINAL="$game_files_dir/English/Client/Content/Aki/ConfigDB/en"
 export DIR_TRANSLATED="$make_pak_from_dir/Client/Content/Aki/ConfigDB/en"
 export FILE_CSV="$w_dir/Translations.csv"
 
