@@ -19,7 +19,7 @@ export FILE_CSV="$w_dir/Translations.csv"
 
 echo "Copying EN files instead of DE..."
 mkdir -p "$make_pak_from_dir/Client/Content/Aki/ConfigDB/de"
-cp -r "$DIR_ORIGINAL/*" "$make_pak_from_dir/Client/Content/Aki/ConfigDB/de"
+cp "$DIR_ORIGINAL/*" "$make_pak_from_dir/Client/Content/Aki/ConfigDB/de/"
 
 echo "Importing CSV to game files..."
 python3 "$py_csv_import"
